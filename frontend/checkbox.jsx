@@ -18,8 +18,9 @@ export default class CheckBox extends React.Component {
   render() {
     return (
         <div>
-          <label>
+          <label className={this.state.isSelected ? "selected" : ""}>
             {this.props.checkBoxTitle}
+            
             <input
               name="isSelected"
               type="checkbox"
