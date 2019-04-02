@@ -4,6 +4,12 @@ import CheckBox from './checkbox'
 export default class CheckBoxGroup extends React.Component {
   constructor(props) {
     super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(event) {
+    alert('Form Submitted');
+    event.preventDefault();
   }
 
 
@@ -22,11 +28,12 @@ export default class CheckBoxGroup extends React.Component {
       }
 
     const checkBoxes = Object.values(data).map((title, idx) => {
-      return <CheckBox checkBoxTitle={title} key={idx}/>
+      return <CheckBox checkBoxTitle={title} key={idx} selected={title === 'Agnes Lorenzen' || title === 'Nichole Wilson' || title === 'Andrew Torres'}/>
     })
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         {checkBoxes}
+        <input type="submit" value="Submit" />
       </form>
     );
   }

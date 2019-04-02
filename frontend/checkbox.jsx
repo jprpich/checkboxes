@@ -4,7 +4,7 @@ export default class CheckBox extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isSelected: false 
+      isSelected: this.props.selected 
     };
     this.handleInputChange = this.handleInputChange.bind(this);
   }
