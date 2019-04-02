@@ -3,9 +3,6 @@ import React from 'react';
 export default class CheckBox extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isSelected: this.props.selected 
-    };
     this.handleInputChange = this.handleInputChange.bind(this);
   }
 
@@ -18,13 +15,13 @@ export default class CheckBox extends React.Component {
   render() {
     return (
         <div>
-          <label className={this.state.isSelected ? "selected" : ""}>
+          <label className={this.props.selected ? "selected" : ""}>
             {this.props.checkBoxTitle}
             
             <input
-              name="isSelected"
+              name={this.props.id}
               type="checkbox"
-              checked={this.state.isSelected}
+              checked={this.props.selected}
               onChange={this.handleInputChange} />
           </label>
           <br />
