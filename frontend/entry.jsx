@@ -8,9 +8,7 @@ import CheckBoxGroup from './checkbox_group';
 function Root() {
   return(
     <div>
-      <div className='interactive'>
-        <CheckBoxGroup />
-      </div>
+      <CheckBoxGroup />
     </div>
   );
 }

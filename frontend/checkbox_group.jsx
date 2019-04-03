@@ -36,7 +36,17 @@ export default class CheckBoxGroup extends React.Component {
 
   render() {
     const checkBoxes = Object.keys(this.state.names).map((id, idx) => {
-      return <CheckBox checkBoxTitle={this.state.names[id]} key={idx} selected={this.state.selected.includes(id)} name={id} handleInputChange={this.handleInputChange}/>
+      return (
+        <label>
+          <CheckBox 
+            key={idx} 
+            selected={this.state.selected.includes(id)} 
+            name={id} 
+            handleInputChange={this.handleInputChange}
+          />
+          <span>{this.state.names[id]}</span>
+        </label>
+      )
     })
     return (
       <form onSubmit={this.handleSubmit}>
