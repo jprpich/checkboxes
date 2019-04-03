@@ -10,11 +10,18 @@ export default class CheckBoxGroup extends React.Component {
       '01021494‑f157‑4183‑964c‑6b0ddc964ab8': true,
       '97a2daa4‑406b‑4b1c‑831e‑bdfd90b224f2': false 
     }
+    this.handleInputChange = this.handleInputChange.bind(this);
   }
 
   handleSubmit(event) {
     alert('Form Submitted');
     event.preventDefault();
+  }
+
+  handleInputChange(event) {
+    this.setState({
+      [event.target.name]: event.target.checked
+    });
   }
 
 
@@ -26,7 +33,7 @@ export default class CheckBoxGroup extends React.Component {
       }
 
     const checkBoxes = Object.keys(data).map((id, idx) => {
-      return <CheckBox checkBoxTitle={data[id]} key={idx} selected={this.state[id]} name={id}/>
+      return <CheckBox checkBoxTitle={data[id]} key={idx} selected={this.state[id]} name={id} handleInputChange={this.handleInputChange}/>
     })
     return (
       <form onSubmit={this.handleSubmit}>
