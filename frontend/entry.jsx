@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 
 import CheckBoxGroup from './checkbox_group';
 
-
-
 function Root() {
   return(
     <div>
@@ -12,7 +10,6 @@ function Root() {
     </div>
   );
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const main = document.getElementById("main");

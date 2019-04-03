@@ -45,7 +45,7 @@ export default class CheckBox extends React.Component {
 
   render() {
     return (
-        <div>
+        <span className="check-box">
           <CheckboxContainer>
             <HiddenCheckbox 
                 name={this.props.name}
@@ -58,7 +58,7 @@ export default class CheckBox extends React.Component {
               </Icon>
             </StyledCheckbox>
           </CheckboxContainer> 
-        </div>
+        </span>
     );
   }
 }
