@@ -51,10 +51,10 @@ export default class CheckBoxGroup extends React.Component {
   render() {
     const checkBoxes = Object.keys(this.state.names).map((id, idx) => {
       return (
-        <div>
+        <div key={idx}>
           <label>
           <CheckBox 
-            key={idx} 
+            
             selected={this.state.selected.includes(id)} 
             name={id} 
             handleInputChange={this.handleInputChange}
