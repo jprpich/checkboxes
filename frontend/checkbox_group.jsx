@@ -1,5 +1,5 @@
 import React from 'react';
-import CheckBox from './checkbox'
+import CheckBox from './checkbox';
 
 export default class CheckBoxGroup extends React.Component {
   constructor(props) {
@@ -53,16 +53,14 @@ export default class CheckBoxGroup extends React.Component {
       return (
         <div key={idx}>
           <label>
-          <CheckBox 
-            
-            selected={this.state.selected.includes(id)} 
-            name={id} 
-            handleInputChange={this.handleInputChange}
-          />
-          <span className={this.state.selected.includes(id) ? "selected" : ""}>{this.state.names[id]}</span>
-        </label>
-        </div>
-        
+            <CheckBox  
+              selected={this.state.selected.includes(id)} 
+              name={id} 
+              handleInputChange={this.handleInputChange}
+            />
+            <span className={this.state.selected.includes(id) ? "selected" : ""}>{this.state.names[id]}</span>
+          </label>
+        </div>  
       )
     })
     return (
@@ -73,8 +71,7 @@ export default class CheckBoxGroup extends React.Component {
           {checkBoxes}
           <input type="submit" value="Submit" />
         </form>
-      </div>
-      
-    );
+      </div> 
+    )
   }
 }

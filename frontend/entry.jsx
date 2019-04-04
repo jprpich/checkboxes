@@ -8,7 +8,7 @@ function Root() {
     <div>
       <CheckBoxGroup />
     </div>
-  );
+  )
 }
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const CheckboxContainer = styled.div`
   display: inline-block;
@@ -45,20 +45,20 @@ export default class CheckBox extends React.Component {
 
   render() {
     return (
-        <span className="check-box">
-          <CheckboxContainer>
-            <HiddenCheckbox 
-                name={this.props.name}
-                type="checkbox"
-                checked={this.props.selected}
-                onChange={this.props.handleInputChange} />
-            <StyledCheckbox checked={this.props.selected}>
-              <Icon viewBox="0 0 24 24">
-                <polyline points="20 6 9 17 4 12" />
-              </Icon>
-            </StyledCheckbox>
-          </CheckboxContainer> 
-        </span>
+      <span className="check-box">
+        <CheckboxContainer>
+          <HiddenCheckbox 
+              name={this.props.name}
+              type="checkbox"
+              checked={this.props.selected}
+              onChange={this.props.handleInputChange} />
+          <StyledCheckbox checked={this.props.selected}>
+            <Icon viewBox="0 0 24 24">
+              <polyline points="20 6 9 17 4 12" />
+            </Icon>
+          </StyledCheckbox>
+        </CheckboxContainer> 
+      </span>
     )
   }
 }
