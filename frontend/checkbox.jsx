@@ -59,6 +59,6 @@ export default class CheckBox extends React.Component {
             </StyledCheckbox>
           </CheckboxContainer> 
         </span>
-    );
+    )
   }
 }
