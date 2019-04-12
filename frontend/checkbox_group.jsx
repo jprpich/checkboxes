@@ -3,8 +3,7 @@ import CheckBox from './checkbox';
 
 export default class CheckBoxGroup extends React.Component {
   constructor(props) {
-    super(props);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    super(props); 
     this.state = {
       names: {
           '01bbb998‑af3d‑47a4‑b0ff‑e67d033d80e9' : 'Luz Ballard' ,
@@ -24,6 +23,7 @@ export default class CheckBoxGroup extends React.Component {
         '97a2daa4‑406b‑4b1c‑831e‑bdfd90b224f2'
         ]
     }
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
   }
 
